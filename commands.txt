@@ -1,0 +1,8 @@
+rails new SaasExc --api
+rails g scaffold User email:uniq password:digest
+ruby bin/rails generate controller signup index
+ruby bin/rails generate controller auth login logout
+rails g model Todo user:references name description
+rails g model TodoItem todo:references text
+rails g controller todo_items show delete update create
+
